@@ -22,13 +22,15 @@ RUN wget https://github.com/broadinstitute/picard/releases/download/1.122/picard
 	ln -s picard-tools-1.122 picard &&\
         rm picard-tools-1.122.zip
 
+# This script originally came from https://github.com/ucscCancer/mc3/
 ADD mutect.py /usr/local/bin/
+
+RUN mkdir /data
+WORKDIR /data
 
 ENTRYPOINT ["/usr/bin/python", "/usr/local/bin/mutect.py"]
 CMD ["--help"]
 
-RUN mkdir /data
-WORKDIR /data
 
 # And clean up
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* 
