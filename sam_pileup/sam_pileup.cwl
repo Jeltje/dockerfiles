@@ -10,8 +10,7 @@ doc: "samtools_pileup runs samtools on invididual chromosomes"
 
 hints:
   DockerRequirement:
-    dockerPull: jeltje/stest
-#    dockerPull: quay.io/jeltje/samtools_pileup
+    dockerPull: quay.io/jeltje/samtools_pileup
 
 requirements:
   - class: InlineJavascriptRequirement
