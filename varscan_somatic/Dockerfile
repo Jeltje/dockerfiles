@@ -22,10 +22,12 @@ RUN     wget http://downloads.sourceforge.net/project/varscan/VarScan.v2.3.9.jar
 RUN	wget https://github.com/genome/bam-readcount/archive/v0.7.4.tar.gz && \
 	tar xvzf v0.7.4.tar.gz &&\
 	rm v0.7.4.tar.gz 
-	cd /opt/bam-readcount-0.7.4 &&\
-	mkdir build &&\
-	cd build &&\
-	cmake ../ &&\
+
+RUN 	mkdir /opt/bam-readcount-0.7.4/build
+
+WORKDIR /opt/bam-readcount-0.7.4/build
+
+RUN	cmake ../ &&\
 	make deps &&\
 	make -j &&\
 	make install
