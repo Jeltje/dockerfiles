@@ -10,8 +10,7 @@ doc: "Filter radia output. If the input is from exomes plus RNA-Seq, set dnaOnly
 
 hints:
   DockerRequirement:
-    dockerPull: jeltje/rtest
-#    dockerPull: quay.io/jeltje/radia
+    dockerPull: quay.io/jeltje/radia
 
 requirements:
   - class: InlineJavascriptRequirement

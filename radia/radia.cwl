@@ -10,8 +10,7 @@ doc: "Runs radia on individual chromosomes, then merges output. An input DNA (ex
 
 hints:
   DockerRequirement:
-    dockerPull: jeltje/rtest
-#    dockerPull: quay.io/jeltje/radia
+    dockerPull: quay.io/jeltje/radia
 
 requirements:
   - class: InlineJavascriptRequirement
