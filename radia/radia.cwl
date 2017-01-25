@@ -4,7 +4,7 @@
 
 cwlVersion: v1.0
 class: CommandLineTool
-baseCommand: [radia_wrapper.py]
+baseCommand: [radia_wrapper]
 
 doc: "Runs radia on individual chromosomes, then merges output. An input DNA (exome) sample pair is required, additional RNA-Seq data for the same sample is advised but optional. Radia performes significantly better when RNA data is added."
 
