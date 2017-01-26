@@ -1,23 +1,23 @@
-## radia
+# radia
 
 This is the MC3 TCGA implementation of `radia` and `filterRadia`. See https://github.com/ucscCancer/mc3 for details.
 
 Radia was partially rewritten for MC3, the original tool can be found at https://github.com/aradenbaugh/radia
 
 
-# Inputs
+## Inputs
 
-Required: `samtools` indexed normal.bam and tumor.bam, `samtools faidx` indexed genome.fasta, and a patient ID. Samtools is present in the docker image and can be called as a command line tool.
+Required: `samtools` indexed normal.bam and tumor.bam, the genome fasta that was used to create the bam files, and a patient ID. Samtools is present in the docker image and can be called as a command line tool.
 
 These inputs are the same for both the `radia` and `filterRadia` wrappers. The `filterRadia` wrapper also takes the `radia` output vcf file.
 
 For optional inputs, see the `cwl` files in this directory. 
 
-# Outputs
+## Outputs
 
-[VCF format] file (https://samtools.github.io/hts-specs/VCFv4.1.pdf)
+[VCF format] (https://samtools.github.io/hts-specs/VCFv4.1.pdf) file
 
-# Notes
+## Notes
 
 Radia was designed to find mutations in short read data, specifically in combinations of exome (tumor and control) and RNA-seq (tumor), with an optional RNA-Seq file for the control sample. The MC3 TCGA implementation allows for all these inputs, but was actually run only on exome data. This is expected to lower Radia's specificity.
 

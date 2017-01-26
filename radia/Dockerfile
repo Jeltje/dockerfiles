@@ -37,8 +37,5 @@ ADD     ./radia_filter_wrapper /usr/local/bin/
 RUN mkdir /data
 WORKDIR /data
 
-#ENTRYPOINT ["/usr/bin/python", "/usr/local/bin/radia_wrapper.py"]
-#CMD ["--help"]
-
 # And clean up
-#RUN apt-get clean && rm -rf /var/lib/apt/lists/* radia-1.1.5  samtools-0.1.18  snpEff_latest_core.zip  v1.1.5.tar.gz
+RUN	apt-get clean && rm -rf /var/lib/apt/lists/* radia-1.1.5  samtools-0.1.18  snpEff_latest_core.zip  v1.1.5.tar.gz
