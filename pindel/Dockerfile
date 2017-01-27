@@ -42,6 +42,6 @@ ENTRYPOINT ["/usr/bin/python", "/usr/local/bin/pindel_wrapper"]
 CMD ["--help"]
 
 # And clean up
-RUN apt-get clean && rm -rf /var/lib/apt/lists/* /opt/*
+RUN apt-get clean && rm -rf /var/lib/apt/lists/* /opt/samtools-1.2
 
 
